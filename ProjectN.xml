@@ -4,17 +4,12 @@
         <name>ProjectN</name>
     </assembly>
     <members>
-        <member name="F:ProjectN.Controllers.CardController._cardRepository">
-            <summary>
-            卡片資料操作
-            </summary>
-        </member>
         <member name="M:ProjectN.Controllers.CardController.#ctor">
             <summary>
             建構式
             </summary>
         </member>
-        <member name="M:ProjectN.Controllers.CardController.GetList">
+        <member name="M:ProjectN.Controllers.CardController.GetList(ProjectN.Parameter.CardSearchParameter)">
             <summary>
             查詢卡片列表
             </summary>
@@ -52,37 +47,37 @@
             <param name="id">卡片編號</param>
             <returns></returns>
         </member>
-        <member name="T:ProjectN.Models.Card">
+        <member name="T:ProjectN.Models.CardViewModel">
             <summary>
             卡片
             </summary>
         </member>
-        <member name="P:ProjectN.Models.Card.Id">
+        <member name="P:ProjectN.Models.CardViewModel.Id">
             <summary>
             卡片編號
             </summary>
         </member>
-        <member name="P:ProjectN.Models.Card.Name">
+        <member name="P:ProjectN.Models.CardViewModel.Name">
             <summary>
             卡片名稱
             </summary>
         </member>
-        <member name="P:ProjectN.Models.Card.Description">
+        <member name="P:ProjectN.Models.CardViewModel.Description">
             <summary>
             卡片描述
             </summary>
         </member>
-        <member name="P:ProjectN.Models.Card.Attack">
+        <member name="P:ProjectN.Models.CardViewModel.Attack">
             <summary>
             攻擊力
             </summary>
         </member>
-        <member name="P:ProjectN.Models.Card.Health">
+        <member name="P:ProjectN.Models.CardViewModel.Health">
             <summary>
             血量
             </summary>
         </member>
-        <member name="P:ProjectN.Models.Card.Cost">
+        <member name="P:ProjectN.Models.CardViewModel.Cost">
             <summary>
             花費
             </summary>
@@ -115,6 +110,46 @@
         <member name="P:ProjectN.Parameter.CardParameter.Cost">
             <summary>
             花費
+            </summary>
+        </member>
+        <member name="T:ProjectN.Parameter.CardSearchParameter">
+            <summary>
+            卡片搜尋參數
+            </summary>
+        </member>
+        <member name="P:ProjectN.Parameter.CardSearchParameter.Name">
+            <summary>
+            卡片名稱
+            </summary>
+        </member>
+        <member name="P:ProjectN.Parameter.CardSearchParameter.MinAttack">
+            <summary>
+            攻擊力下限
+            </summary>
+        </member>
+        <member name="P:ProjectN.Parameter.CardSearchParameter.MaxAttack">
+            <summary>
+            攻擊力上限
+            </summary>
+        </member>
+        <member name="P:ProjectN.Parameter.CardSearchParameter.MinHealth">
+            <summary>
+            血量下限
+            </summary>
+        </member>
+        <member name="P:ProjectN.Parameter.CardSearchParameter.MaxHealth">
+            <summary>
+            血量上限
+            </summary>
+        </member>
+        <member name="P:ProjectN.Parameter.CardSearchParameter.MinCost">
+            <summary>
+            花費值下限
+            </summary>
+        </member>
+        <member name="P:ProjectN.Parameter.CardSearchParameter.MaxCost">
+            <summary>
+            花費值上限
             </summary>
         </member>
         <member name="F:ProjectN.Repository.CardRepository._connectString">
