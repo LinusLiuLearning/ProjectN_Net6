@@ -12,6 +12,7 @@ namespace ProjectN.Repository
         /// 連線字串
         /// </summary>
         private readonly string _connectString = @"Data Source=DEV376;Initial Catalog=Newbie;Persist Security Info=False;User ID=sa;Password=Aa!234567890;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
+    
         /// <summary>
         /// 查詢卡片列表
         /// </summary>

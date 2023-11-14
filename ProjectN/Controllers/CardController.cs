@@ -21,13 +21,12 @@ namespace ProjectN.Controllers
         /// <summary>
         /// 建構式
         /// </summary>
-        public CardController()
+        public CardController(ICardService cardService)
         {
-            var config = new MapperConfiguration(cfg =>
-             cfg.AddProfile<ControllerMappings>());
+            var config = new MapperConfiguration(cfg =>cfg.AddProfile<ControllerMappings>());
 
             this._mapper = config.CreateMapper();
-            this._cardService = new CardService();
+            this._cardService = cardService;
         }
 
 

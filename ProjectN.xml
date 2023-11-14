@@ -4,7 +4,7 @@
         <name>ProjectN</name>
     </assembly>
     <members>
-        <member name="M:ProjectN.Controllers.CardController.#ctor">
+        <member name="M:ProjectN.Controllers.CardController.#ctor(ProjectN.Service.Interface.ICardService)">
             <summary>
             建構式
             </summary>

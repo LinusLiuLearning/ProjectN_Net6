@@ -15,7 +15,12 @@ namespace ProjectN.Repository.Implement
         /// <summary>
         /// 連線字串
         /// </summary>
-        private readonly string _connectString = @"Data Source=DEV376;Initial Catalog=Newbie;Persist Security Info=False;User ID=sa;Password=Aa!234567890;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
+        private readonly string _connectString;
+
+        public CardRepository(string connectString)
+        {
+            this._connectString = connectString;
+        }
 
         /// <summary>
         /// 查詢卡片列表

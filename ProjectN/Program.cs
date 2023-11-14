@@ -1,10 +1,26 @@
+using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
+using ProjectN.Repository.Implement;
+using ProjectN.Repository.Interface;
+using ProjectN.Service.Implement;
+using ProjectN.Service.Interface;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+var _connectionString = builder.Configuration.GetValue<string>("ConnectionString");
 
+// Add services to the container.
+// Service
+builder.Services.AddScoped<ICardService, CardService>();
+// Repsitory
+// 註冊 ICardRepository 的實作為 CardRepository
+builder.Services.AddScoped<ICardRepository, CardRepository>(m => {
+    var connectString = _connectionString;
+    return new CardRepository(connectString);
+});
+
+// Others
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
