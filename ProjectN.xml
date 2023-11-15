@@ -87,6 +87,11 @@
             卡片參數
             </summary>
         </member>
+        <member name="P:ProjectN.Parameter.CardParameter.CardType">
+            <summary>
+            卡片類型
+            </summary>
+        </member>
         <member name="P:ProjectN.Parameter.CardParameter.Name">
             <summary>
             卡片名稱
@@ -110,6 +115,11 @@
         <member name="P:ProjectN.Parameter.CardParameter.Cost">
             <summary>
             花費
+            </summary>
+        </member>
+        <member name="P:ProjectN.Parameter.CardParameter.Alias">
+            <summary>
+            別名
             </summary>
         </member>
         <member name="T:ProjectN.Parameter.CardSearchParameter">
@@ -190,6 +200,16 @@
             </summary>
             <param name="id">卡片編號</param>
             <returns></returns>
+        </member>
+        <member name="T:ProjectN.Validators.CardParameterValidator">
+            <summary>
+            Card Parameter 的驗證器
+            </summary>
+        </member>
+        <member name="M:ProjectN.Validators.CardParameterValidator.#ctor">
+            <summary>
+            驗證器的建構式: 在這裡註冊我們要驗證的規則
+            </summary>
         </member>
     </members>
 </doc>

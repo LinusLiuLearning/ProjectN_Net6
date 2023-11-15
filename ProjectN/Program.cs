@@ -1,9 +1,14 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
+using ProjectN.Parameter;
 using ProjectN.Repository.Implement;
 using ProjectN.Repository.Interface;
 using ProjectN.Service.Implement;
 using ProjectN.Service.Interface;
+using ProjectN.Validators;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -53,6 +58,9 @@ builder.Services.AddSwaggerGen(c =>
 
 });
 
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
+builder.Services.AddValidatorsFromAssemblyContaining<CardParameterValidator>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

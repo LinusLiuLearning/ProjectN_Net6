@@ -6,6 +6,11 @@
     public class CardParameter
     {
         /// <summary>
+        /// 卡片類型
+        /// </summary>
+        public CardType CardType { get; set; }
+
+        /// <summary>
         /// 卡片名稱
         /// </summary>
         public string Name { get; set; }
@@ -29,5 +34,16 @@
         /// 花費
         /// </summary>
         public int Cost { get; set; }
+
+        /// <summary>
+        /// 別名
+        /// </summary>
+        public List<string> Alias { get; set; }
+
+        public Equipment Equipment { get; set; } // 可以穿裝備了！
     }
+
+    public enum CardType { Monster }
+
+    public class Equipment { }
 }
